@@ -4,6 +4,8 @@ A lo-fi and ambient music player for focus, rest, and creative flow. Browse by
 **mood** rather than genre, and switch the whole interface between a dark
 **night** palette and a soft **day** palette.
 
+<img width="1171" height="915" alt="image" src="https://github.com/user-attachments/assets/95cd8ea8-b7e0-4b7b-a609-aeeca0e846da" />
+
 **Live:** https://linmicarm.github.io/petalfm/
 
 Built with React, TypeScript, Vite, Framer Motion, and CSS Modules.
