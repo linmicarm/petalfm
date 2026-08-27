@@ -10,8 +10,6 @@ A lo-fi and ambient music player for focus, rest, and creative flow. Browse by
 
 Built with React, TypeScript, Vite, Framer Motion, and CSS Modules.
 
-![petal.fm night and day](docs/preview.png)
-
 ---
 
 ## What it does
