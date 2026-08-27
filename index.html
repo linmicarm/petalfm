@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/petalfm/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="petal.fm — lo-fi and ambient music for focus, rest, and creative flow."
+    />
+    <meta name="theme-color" content="#141020" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.14.0/dist/tabler-icons.min.css"
+    />
+    <title>petal.fm</title>
+    <script>
+      // Restores the path stashed by 404.html so the SPA redirect round-trips.
+      (function () {
+        var q = window.location.search;
+        if (q && q.indexOf('/?/') !== -1) {
+          var decoded = q.slice(3).split('&').map(function (s) {
+            return s.replace(/~and~/g, '&');
+          });
+          window.history.replaceState(
+            null,
+            '',
+            window.location.pathname.slice(0, -1) +
+              (decoded[0] ? '/' + decoded[0] : '') +
+              (decoded[1] ? '?' + decoded[1] : '') +
+              window.location.hash
+          );
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

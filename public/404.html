@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>petal.fm</title>
+    <script>
+      // GitHub Pages SPA redirect: rewrites a deep-link path into a query the
+      // app can restore, so refreshing /petalfm/anything doesn't 404.
+      // Harmless for the current single-view app; ready for when routing lands.
+      var segCount = 1; // repo name occupies one path segment
+      var l = window.location;
+      var path = l.pathname.split('/').slice(0, 1 + segCount).join('/');
+      var rest = l.pathname.slice(path.length).replace(/^\//, '');
+      l.replace(
+        l.protocol + '//' + l.host + path + '/?/' +
+        rest.replace(/&/g, '~and~') +
+        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
+        l.hash
+      );
+    </script>
+  </head>
+  <body></body>
+</html>

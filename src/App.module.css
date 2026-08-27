@@ -1,0 +1,36 @@
+.app {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: var(--maxw);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  overflow: hidden;
+  transition: background 0.4s ease, border-color 0.4s ease;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 22px 4px;
+}
+
+.logo {
+  font-family: var(--font-display);
+  font-size: 20px;
+  letter-spacing: 0.02em;
+}
+
+.dot {
+  color: var(--accent);
+  transition: color 0.4s ease;
+}

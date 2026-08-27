@@ -1,0 +1,148 @@
+.player {
+  padding: 24px 22px 20px;
+}
+
+.art {
+  width: 190px;
+  height: 190px;
+  margin: 0 auto 20px;
+  border-radius: var(--radius);
+  background: var(--art);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.4s ease;
+}
+
+.art i {
+  font-size: 52px;
+  color: var(--art-icon);
+  transition: color 0.4s ease;
+}
+
+.meta {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: 22px;
+  letter-spacing: 0.01em;
+}
+
+.sub {
+  font-size: 13px;
+  color: var(--text-soft);
+  margin-top: 4px;
+}
+
+.seek {
+  margin-bottom: 18px;
+}
+
+.times {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  color: var(--text-faint);
+  margin-top: 7px;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 26px;
+  margin-bottom: 20px;
+}
+
+.ctrl {
+  font-size: 22px;
+  color: var(--text-soft);
+  transition: color 0.2s ease;
+  display: flex;
+}
+
+.ctrl:hover {
+  color: var(--text);
+}
+
+.play {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  transition: transform 0.15s ease, background 0.4s ease;
+}
+
+.play:hover {
+  transform: scale(1.05);
+}
+
+.play:active {
+  transform: scale(0.96);
+}
+
+.volume {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 4px;
+}
+
+.volume i {
+  font-size: 16px;
+  color: var(--text-faint);
+}
+
+/* custom range slider — filled portion in accent, rest in track color */
+.range {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 3px;
+  background: linear-gradient(
+    to right,
+    var(--accent) 0%,
+    var(--accent) var(--pct, 0%),
+    var(--track) var(--pct, 0%),
+    var(--track) 100%
+  );
+  outline: none;
+  cursor: pointer;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface-raised);
+  transition: transform 0.15s ease;
+}
+
+.range::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.range::-moz-range-thumb {
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--surface-raised);
+}
+
+.range:focus-visible {
+  box-shadow: 0 0 0 3px var(--chip);
+}
